@@ -1,11 +1,8 @@
 # cv2.cvtColor takes a numpy ndarray as an argument
 import numpy as nm
-
+import pyautogui
 import pytesseract
-
-# importing OpenCV
 import cv2
-
 from PIL import ImageGrab
 
 
@@ -21,6 +18,11 @@ def imToString():
             cv2.cvtColor(nm.array(cap), cv2.COLOR_BGR2GRAY), lang="eng"
         )
         print(tesstr)
+
+        # pyautogui.keyDown('left')
+        # pyautogui.press('down')
+        # pyautogui.keyUp('left')
+        pyautogui.press("f7")
 
 
 if __name__ == "__main__":
